@@ -100,6 +100,10 @@ PRODUCT_PACKAGES += \
     camera.exynos5 \
     Snap
 
+# DTB    
+PRODUCT_PACKAGES += \
+	dtbhtoolExynos
+
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     make_ext4fs \
