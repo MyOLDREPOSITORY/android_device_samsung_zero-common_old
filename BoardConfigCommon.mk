@@ -85,6 +85,7 @@ BOARD_USES_DT := true
 BOARD_HARDWARE_CLASS += device/samsung/zero-common/cmhw
 
 # HWCServices
+BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 BOARD_USES_HWC_SERVICES := true
 
 # Renderscript
