@@ -177,15 +177,19 @@ PRODUCT_PACKAGES += \
 
 # common build properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=640 \
-    ro.opengles.version=196609 \
+    ro.sf.lcd_density=640 \    
     ro.chipname=exynos7420 \
     af.fast_track_multiplier=1 \
     audio_hal.force_voice_config=wide \
     ro.nfc.sec_hal=true \
-    wifi.interface=wlan0 \
+    wifi.interface=wlan0 
+      
+# GPU
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.composition.type=gpu \
+    ro.opengles.version=196609 \
     video.accelerate.hw=1 \
-    debug.composition.type=gpu 
+    debug.egl.hw=1
 
 # Radio
 PRODUCT_PACKAGES += \
