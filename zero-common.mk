@@ -203,6 +203,7 @@ PRODUCT_COPY_FILES += \
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
+    
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
 
