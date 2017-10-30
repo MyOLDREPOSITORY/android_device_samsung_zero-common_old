@@ -5,13 +5,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik/Art
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sys.fw.dex2oat_thread_count=4 \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapgrowthlimit=192m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapmaxfree=8m
+	dalvik.vm.checkjni=false \
+	dalvik.vm.dexopt-data-only=1 \
+	dalvik.vm.heapstartsize=24m \
+	dalvik.vm.heapgrowthlimit=384m \
+	dalvik.vm.heapsize=1024m \
+	dalvik.vm.heaptargetutilization=0.9 \
+	dalvik.vm.heapminfree=1m \
+	dalvik.vm.heapmaxfree=32m \
+	dalvik.vm.verify-bytecode=false \
+	dalvik.vm.execution-mode=int:jit \
+	dalvik.vm.dexopt-flags=m=v,o=y \
+	dalvik.vm.jmiopts=forcecopy
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -20,6 +25,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609 \
     video.accelerate.hw=1 \
     ro.sf.lcd_density=640 \ 
+    debug.egl.profiler=1 \
     debug.hwc.force_gpu=1 
 
 # common build properties
