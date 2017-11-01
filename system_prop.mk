@@ -20,7 +20,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609 \
     video.accelerate.hw=1 \
     ro.sf.lcd_density=640 \ 
-    persist.sys.ui.hw=1 
+    persist.sys.ui.hw=1 \
     debug.egl.profiler=1 \
     debug.hwc.force_gpu=1 
 
