@@ -5,32 +5,29 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik/Art
 PRODUCT_PROPERTY_OVERRIDES += \
-	dalvik.vm.checkjni=false \
-	dalvik.vm.dexopt-data-only=1 \
+	ro.sys.fw.dex2oat_thread_count=4 \
 	dalvik.vm.heapstartsize=24m \
 	dalvik.vm.heapgrowthlimit=384m \
 	dalvik.vm.heapsize=1024m \
 	dalvik.vm.heaptargetutilization=0.9 \
 	dalvik.vm.heapminfree=1m \
-	dalvik.vm.heapmaxfree=32m \
-	dalvik.vm.verify-bytecode=false \
-	dalvik.vm.execution-mode=int:jit \
-	dalvik.vm.dexopt-flags=m=v,o=y \
-	dalvik.vm.jmiopts=forcecopy
+	dalvik.vm.heapmaxfree=32m 
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=gpu \
-    ro.bq.gpu_to_cpu_unsupported=1 \
+    debug.hwc.max_hw_overlays=0 \
     ro.opengles.version=196609 \
     video.accelerate.hw=1 \
     ro.sf.lcd_density=640 \ 
+    persist.sys.ui.hw=1 
     debug.egl.profiler=1 \
     debug.hwc.force_gpu=1 
 
 # common build properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.chipname=exynos7420 
+    ro.chipname=exynos7420  \
+    persist.sys.usb.config=mtp
     
 # Radio Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -55,7 +52,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
      wifi.interface=wlan0 
-
-# Set default USB interface
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
