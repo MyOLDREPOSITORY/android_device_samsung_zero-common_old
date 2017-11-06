@@ -81,7 +81,6 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(LOCAL_PATH)/configs/mixer_paths_0.xml:system/etc/mixer_paths_0.xml
 
 PRODUCT_PACKAGES += \
@@ -182,7 +181,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
 	libxml2 \
 	libprotobuf-cpp-full \
-	libsecril-client
+	libsecril-client \
+	libsecril-client-sap
 
 # Radio Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -205,6 +205,7 @@ PRODUCT_PACKAGES += \
     fstab.samsungexynos7420 \
     init.baseband.rc \
     init.gps.rc \
+    init.power.rc \
     init.samsungexynos7420.rc \
     init.samsungexynos7420.usb.rc \
     init.wifi.rc \
@@ -213,14 +214,6 @@ PRODUCT_PACKAGES += \
 # Samsung
 PRODUCT_PACKAGES += \
     SamsungServiceMode
-
-# Shims
-PRODUCT_PACKAGES += \
-    libshim_gpsd
-
-# Widevine
-PRODUCT_PACKAGES += \
-    libshim_wvm
 
 # Wifi
 PRODUCT_PACKAGES += \

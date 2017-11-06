@@ -80,15 +80,18 @@ BOARD_USES_SCALER := true
 BOARD_USES_DT := true
 
 # Hardware
+BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 BOARD_HARDWARE_CLASS += device/samsung/zero-common/cmhw
 
 # HWCServices
-BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 BOARD_USES_HWC_SERVICES := true
 
 # Renderscript
 BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a53
 BOARD_OVERRIDE_RS_CPU_VARIANT_64 := cortex-a57
+
+# WFD
+BOARD_USES_WFD := true
 
 # HDMI
 BOARD_HDMI_INCAPABLE := true
