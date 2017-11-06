@@ -148,16 +148,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
     
-  # Dalvik/Art
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sys.fw.dex2oat_thread_count=4 \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapgrowthlimit=192m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapmaxfree=8m
-
 # NFC
 PRODUCT_PACKAGES += \
     libnfc-nci \
@@ -175,44 +165,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     power.universal7420
 
-# common build properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=640 \    
-    ro.chipname=exynos7420 \
-    af.fast_track_multiplier=1 \
-    audio_hal.force_voice_config=wide \
-    ro.nfc.sec_hal=true \
-    wifi.interface=wlan0 
-      
-# GPU
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.composition.type=gpu \
-    ro.opengles.version=196609 \
-    video.accelerate.hw=1 \
-    debug.egl.hw=1
-
 # Radio
 PRODUCT_PACKAGES += \
 	libxml2 \
 	libprotobuf-cpp-full \
 	libsecril-client \
 	libsecril-client-sap
-
-# Radio Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.add_power_save=1 \
-	persist.radio.apm_sim_not_pwdn=1 \
-    rild.libpath=/system/lib64/libsec-ril.so \
-    rild.libpath2=/system/lib64/libsec-ril-dsds.so \
-    ro.telephony.ril_class=SlteRIL \
-    telephony.lteOnGsmDevice=1 \
-    telephony.lteOnCdmaDevice=0 \
-    ro.telephony.default_network=9 \
-    ro.use_data_netmgrd=false \
-    persist.data.netmgrd.qos.enable=false \
-    ro.ril.hsxpa=1 \
-    ro.ril.telephony.mqanelements=6 \
-    ro.ril.gprsclass=10
     
 # Ramdisk
 PRODUCT_PACKAGES += \
