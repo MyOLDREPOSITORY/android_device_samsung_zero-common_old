@@ -179,7 +179,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.nfc.sec_hal=true \
     wifi.interface=wlan0 \
     debug.hwc.force_gpu=1 \
-    ro.bq.gpu_to_cpu_unsupported=1
+    video.accelerate.hw=1 \
+    debug.composition.type=gpu \
+    persist.sys.ui.hw=1 \
+    debug.egl.profiler=1 
+    
 
 # Radio
 PRODUCT_PACKAGES += \
