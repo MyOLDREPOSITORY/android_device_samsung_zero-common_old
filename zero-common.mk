@@ -208,7 +208,6 @@ PRODUCT_PACKAGES += \
     init.baseband.rc \
     init.gps.rc \
     init.power.rc \
-    init.rilcommon.rc \
     init.samsungexynos7420.rc \
     init.samsungexynos7420.usb.rc \
     init.wifi.rc \
