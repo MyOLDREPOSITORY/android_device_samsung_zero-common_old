@@ -132,6 +132,10 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     lights.universal7420
+    
+# Libstlport
+PRODUCT_PACKAGES += \
+    libstlport
 
 # MDNIE
 #PRODUCT_PACKAGES += \
