@@ -27,10 +27,14 @@ else
 DEVICE_PACKAGE_OVERLAYS += device/samsung/zero-common/overlay-gsm
 endif
 
-PRODUCT_AAPT_CONFIG := xlarge
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+# This device is 640dpi.  However the platform doesn't
+# currently contain all of the bitmaps at 640dpi density so
+# we do this little trick to fall back to the xxhdpi version
+# if the 640dpi doesn't exist.
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := 640dpi
 # A list of dpis to select prebuilt apk, in precedence order.
-PRODUCT_AAPT_PREBUILT_DPI := hdpi mdpi
+PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
@@ -132,7 +136,7 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     lights.universal7420
-    
+
 # Libstlport
 PRODUCT_PACKAGES += \
     libstlport
@@ -170,18 +174,14 @@ PRODUCT_PACKAGES += \
 # common build properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=640 \
-    ro.opengles.version=196610 \
+    ro.opengles.version=196609 \
     ro.chipname=exynos7420 \
     af.fast_track_multiplier=1 \
     audio_hal.force_voice_config=wide \
     ro.nfc.sec_hal=true \
     wifi.interface=wlan0 \
     debug.hwc.force_gpu=1 \
-    video.accelerate.hw=1 \
-    debug.composition.type=gpu \
-    persist.sys.ui.hw=1 \
-    debug.egl.profiler=1 
-    
+    ro.bq.gpu_to_cpu_unsupported=1
 
 # Radio
 PRODUCT_PACKAGES += \
