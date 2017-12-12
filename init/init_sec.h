@@ -23,7 +23,13 @@ enum device_variant {
     G920P,
     G920I,
     G920F,
-    G925F
+    G925F,
+    G925S,
+    G925K,
+    G925L,
+    G925I,
+    G925W8,
+    G920W8
 };
 
 device_variant match(std::string bl)
@@ -42,6 +48,18 @@ device_variant match(std::string bl)
         return G920F;
     } else if (bl.find("G925F") != std::string::npos) {
         return G925F;
+    } else if (bl.find("G925S") != std::string::npos) {
+        return G925S;
+    } else if (bl.find("G925K") != std::string::npos) {
+        return G925K;
+    } else if (bl.find("G925L") != std::string::npos) {
+        return G925L;
+    } else if (bl.find("G925I") != std::string::npos) {
+        return G925I;
+    } else if (bl.find("G925W8") != std::string::npos) {
+        return G925W8;
+    } else if (bl.find("G920W8") != std::string::npos) {
+        return G920W8;
     } else {
         return UNKNOWN;
     }
