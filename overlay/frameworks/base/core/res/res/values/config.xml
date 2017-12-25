@@ -334,16 +334,15 @@
     <bool name="config_carrier_volte_available">true</bool>
 
     <!-- Flag specifying whether VoLTE availability is based on provisioning -->
-	<!-- TODO: Uncomment this if Lineage has re-added support -->
-    <!-- <bool name="config_carrier_volte_provisioned">true</bool> -->
+    <bool name="config_carrier_volte_provisioned">true</bool>
 
     <!-- Flag indicating whether strict threshold is used, or lenient threshold is used,
             when evaluating RSRP for LTE antenna bar display
            0. Strict threshold
            1. Lenient threshold
-           2. Custom threshold
     -->
-    <integer name="config_LTE_RSRP_threshold_type">2</integer>
+    <integer name="config_LTE_RSRP_threshold_type">1</integer>
+
 
     <!-- For performance and storage reasons, limit the number of fingerprints per user -->
     <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
