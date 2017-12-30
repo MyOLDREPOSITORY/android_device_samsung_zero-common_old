@@ -180,7 +180,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.nfc.sec_hal=true \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=180 \
-    debug.hwc.force_gpu=1 
+    debug.hwc.force_gpu=0 \
+    video.accelerate.hw=1 
 
 # Radio
 PRODUCT_PACKAGES += \
