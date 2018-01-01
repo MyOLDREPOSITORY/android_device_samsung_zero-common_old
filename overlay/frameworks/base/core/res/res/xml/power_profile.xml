@@ -8,10 +8,10 @@
     <item name="wifi.on">2</item>
     <item name="wifi.scan">300</item>
     <item name="wifi.active">700</item>
-    <item name="gps.on">2</item>
+    <item name="gps.on">54</item>
     <item name="dsp.audio">43</item>
     <item name="dsp.video">180</item>
-    <item name="radio.active">200</item>
+    <item name="radio.active">166</item>
     <item name="radio.scanning">50</item>
     <array name="radio.on">
         <value>3.4</value>
