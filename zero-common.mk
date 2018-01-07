@@ -99,7 +99,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.exynos5 \
+        camera.exynos5 \
     Snap
 
 # DTB    
