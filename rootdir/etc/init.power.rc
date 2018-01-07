@@ -147,22 +147,6 @@ on boot
 
     chown radio system /sys/module/cpuidle/parameters/off
     chmod 0664 /sys/module/cpuidle/parameters/off
-    
-     # WAKELOCKS CONTROL
-     write /sys/module/wakeup/parameters/enable_bcm4773_wl N
-     write /sys/module/wakeup/parameters/enable_sensorhub_wl N
-     write /sys/module/wakeup/parameters/enable_ssp_wl N
-     write /sys/module/wakeup/parameters/enable_wlan_rx_wake_wl N
-     write /sys/module/wakeup/parameters/enable_wlan_ctrl_wake_wl N
-     write /sys/module/wakeup/parameters/enable_wlan_extscan_wl_ws N
-     write /sys/module/wakeup/parameters/enable_wlan_wake_wl N
-     write /sys/module/wakeup/parameters/enable_wlan_scan_wake_wl N
-     write /sys/module/wakeup/parameters/enable_wlan_pm_wake_wl N
-     write /sys/module/wakeup/parameters/enable_wlan_txfl_wake_wl N
-     write /sys/module/wakeup/parameters/enable_power_manager_service_wl Y
-     write /sys/module/wakeup/parameters/enable_netlink_ws N
-     write /sys/module/wakeup/parameters/enable_alarmtimer_ws Y
-     write /sys/module/wakeup/parameters/enable_bluedroid_timer_wl Y
 
     # HMP Status
     chown system system /sys/kernel/hmp/load_avg_period_ms
