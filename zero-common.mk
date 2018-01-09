@@ -102,6 +102,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         camera.exynos5 \
     Snap
+    
+# build.prop
+PRODUCT_PROPERTY_OVERRIDES += \
+       camera.hal1.packagelist=com.skype.raider,com.whatsapp
 
 # DTB    
 PRODUCT_PACKAGES += \
