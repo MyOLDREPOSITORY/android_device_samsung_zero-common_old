@@ -195,6 +195,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio_hal.force_voice_config=wide \
     ro.nfc.sec_hal=true \
     wifi.interface=wlan0 \
+    ro.bq.gpu_to_cpu_unsupported=1 \
     debug.hwc.force_gpu=1 \
     video.accelerate.hw=1 
 
