@@ -105,7 +105,7 @@ PRODUCT_PACKAGES += \
     
 # build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-       camera.hal1.packagelist=com.skype.raider,com.whatsapp
+       camera.hal1.packagelist=com.skype.raider,com.whatsapp,com.instagram.android
 
 # DTB    
 PRODUCT_PACKAGES += \
