@@ -120,6 +120,12 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="972000" />
             <Limit name="bitrate" range="1-100000000" />
+            <!-- for skypeHD -->
+            <Limit name="vt-version" value="1.0" />  <!-- TODO: need to discuss -->
+            <Limit name="vt-low-latency" value="1" />
+            <Limit name="vt-max-instances" value="16" />
+            <Limit name="vt-max-level" value="65536" />  <!-- AVCLevel52(0x10000) // depends on MFC version -->
+            <Limit name="vt-max-macroblock-processing-rate" value="1944000" />  <!-- same as blocks-per-second // depends on MFC version, but, it is restricted to 1944000 that is max value allowed -->
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
@@ -266,6 +272,19 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="2073600" />
             <Limit name="bitrate" range="1-100000000" />
             <Limit name="concurrent-instances" max="16" />
+            <!-- for skypeHD -->
+            <Limit name="vt-version" value="1.0" />  <!-- TODO: need to discuss -->
+            <Limit name="vt-low-latency" value="1" />
+            <Limit name="vt-max-instances" value="16" />
+            <Limit name="vt-max-temporal-layer-count" value="3" />
+            <Limit name="vt-max-ref-frames" value="4" />
+            <Limit name="vt-max-ltr-frames" value="3" />
+            <Limit name="vt-max-level" value="65536" />  <!-- AVCLevel52(0x10000) // depends on MFC version -->
+            <Limit name="vt-slice-control-modes-bitmask" value="3" />  <!-- supports MB and Byte mode -->
+            <Limit name="vt-max-macroblock-processing-rate" value="1944000" />  <!-- same as blocks-per-second // depends on MFC version, but, it is restricted to 1944000 that is max value allowed -->
+            <Limit name="vt-down-scale-factor" value="0" />
+            <Limit name="vt-min-scale-factor" value="0" />
+            <Limit name="vt-slice-hdr-spacing" value="1" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.H263.Encoder" type="video/3gpp" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -323,5 +342,7 @@ Only the three quirks included above are recognized at this point:
     </Decoders>
     <Include href="media_codecs_google_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
+    <Include href="media_codecs_sec_primary.xml" />
+    <Include href="media_codecs_sec_secondary.xml" />
     <Include href="media_codecs_ffmpeg.xml" />
 </MediaCodecs>
