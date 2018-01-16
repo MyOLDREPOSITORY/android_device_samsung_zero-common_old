@@ -100,7 +100,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-       camera.hal1.packagelist=com.skype.raider,com.whatsapp,com.instagram.android       
+       camera.hal1.packagelist=org.telegram.messenger,com.whatsapp,com.instagram.android,net.sourceforge.opencamera       
 
 # DTB    
 PRODUCT_PACKAGES += \
