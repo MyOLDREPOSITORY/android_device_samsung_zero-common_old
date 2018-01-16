@@ -58,7 +58,7 @@ vendor/firmware/bcm4358A3_V0083.0138_semco.hcd
 vendor/firmware/bcm4358A3_V0083.0138_wisol.hcd
 
 # Camera
-lib64/hw/camera.vendor.exynos5.so
+lib64/hw/camera.exynos5.so
 lib64/libagc_max.so
 lib64/libarac.so
 lib64/libcamera_metadata.so
@@ -69,7 +69,7 @@ lib64/libhwjpeg.so
 lib64/libsdid.so
 lib64/libseccamera_jni.so
 lib64/libsecnativefeature.so
-lib/hw/camera.vendor.exynos5.so
+lib/hw/camera.exynos5.so
 lib/libarac.so
 lib/libcamera_metadata.so
 lib/libexynoscamera3.so
